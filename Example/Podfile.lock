@@ -1,16 +1,32 @@
 PODS:
+  - Alamofire (5.4.2)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - ModFavoritos (0.1.0)
+  - SwiftLint (0.43.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.4.1)
+  - AlamofireImage (~> 4.1.0)
   - ModFavoritos (from `../`)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - SwiftLint
 
 EXTERNAL SOURCES:
   ModFavoritos:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   ModFavoritos: ddc16da735860f1f3c4c642632a68baf441d76dc
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: c2e428334b4398f8a7a4e54571992c68fcb206e6
+PODFILE CHECKSUM: 2210c827a7d05d3f1c4880244304057895c9838e
 
 COCOAPODS: 1.10.1

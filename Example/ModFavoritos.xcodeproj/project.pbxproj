@@ -41,9 +41,9 @@
 		607FACE51AFB9204008FA782 /* ModFavoritos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModFavoritos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		677935EDBBB4AF4BC473836A /* ModFavoritos.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ModFavoritos.podspec; path = ../ModFavoritos.podspec; sourceTree = "<group>"; };
-		69757BCFEF4B4597E058F934 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		857D7776C999FCDC30F3ED8C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		677935EDBBB4AF4BC473836A /* ModFavoritos.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ModFavoritos.podspec; path = ../ModFavoritos.podspec; sourceTree = "<group>"; };
+		69757BCFEF4B4597E058F934 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		857D7776C999FCDC30F3ED8C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A5BEF1FBD4310D6F591DB460 /* Pods-ModFavoritos_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModFavoritos_Example.release.xcconfig"; path = "Target Support Files/Pods-ModFavoritos_Example/Pods-ModFavoritos_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A6143CF2C07DFBC0E6C1C693 /* Pods_ModFavoritos_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModFavoritos_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EB50EDDA724E5011003439 /* Pods_ModFavoritos_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModFavoritos_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +156,6 @@
 				4EC548817E2389D2810A401F /* Pods-ModFavoritos_Tests.debug.xcconfig */,
 				0084054AF17CFBF9330AB51F /* Pods-ModFavoritos_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,6 +171,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				7DDFE8E87D80072A7F2E49F0 /* [CP] Embed Pods Frameworks */,
+				C10841222628ADB30010BEAE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -227,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -269,10 +270,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ModFavoritos_Example/Pods-ModFavoritos_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ModFavoritos/ModFavoritos.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ModFavoritos.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +306,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C10841222628ADB30010BEAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n\n${PODS_ROOT}/SwiftLint/swiftlint\n\nelse\n\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n\nfi\n";
 		};
 		FAFF7B8FB6838EF37725D850 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
