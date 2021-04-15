@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ModFavoritos_Example' do
+  pod 'ModFavoritos', :path => '../'
+
+  target 'ModFavoritos_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
