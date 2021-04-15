@@ -1,0 +1,16 @@
+PODS:
+  - ModFavoritos (0.1.0)
+
+DEPENDENCIES:
+  - ModFavoritos (from `../`)
+
+EXTERNAL SOURCES:
+  ModFavoritos:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ModFavoritos: ddc16da735860f1f3c4c642632a68baf441d76dc
+
+PODFILE CHECKSUM: c2e428334b4398f8a7a4e54571992c68fcb206e6
+
+COCOAPODS: 1.10.1

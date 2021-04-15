@@ -1,0 +1,6 @@
+framework module ModFavoritos {
+  umbrella header "ModFavoritos-umbrella.h"
+
+  export *
+  module * { export * }
+}
