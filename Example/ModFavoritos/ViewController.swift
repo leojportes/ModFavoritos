@@ -1,25 +1,23 @@
 //
 //  ViewController.swift
-//  ModFavoritos
+//  ModFavoritos_Example
 //
-//  Created by leojportes on 04/15/2021.
-//  Copyright (c) 2021 leojportes. All rights reserved.
+//  Created by Leonardo Oliveira Portes on 16/04/21.
+//  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var Favoritos: UITableView!
+    
+    
+    @IBOutlet weak var telaFavoritos: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 }
-
