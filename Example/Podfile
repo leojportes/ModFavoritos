@@ -4,7 +4,7 @@ platform :ios, '10.0'
 
 target 'ModFavoritos_Example' do
   pod 'ModFavoritos', :path => '../'
-  pod 'SwiftLint'
+#  pod 'SwiftLint'
   pod 'Alamofire', '~> 5.4.1'
   pod 'AlamofireImage', '~> 4.1.0'
 
